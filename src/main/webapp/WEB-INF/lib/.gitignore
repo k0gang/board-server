@@ -1,1 +1,8 @@
-/mysql-connector-j-8.3.0.jar
+.settings
+.project
+.classpath
+build/
+/bin/
+src/main/webapp/WEB-INF/lib/
+/jstl-1.2.jar
+/standard-1.1.2.jar
