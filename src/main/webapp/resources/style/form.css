@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+}
+
+form input,  
+form select
+{
+	outline: none;
+}
+
+form input[type="text"], 
+form input[type="password"],
+#agree-container
+{
+	width: 400px;
+	padding: 12px;
+}
+
+#agree-container
+{
+	border-radius: 10px;
+	border: solid 1px lightgrey;
+}
+
+form > input[type="submit"] {
+	width: 426px;
+	color: whitesmoke;
+	padding: 12px;
+	margin: 0;
+	border: none;
+	border-radius: 10px;
+	background-color: #5356FF;
+}
+
+form > div > select {
+	width: 100%;
+	padding: 12px;
+}
+
+form input[type="radio"] {
+	display: none;
+}
+
+form > div, 
+form > input:last-child
+{
+	margin-top: 20px;
+}
+
+form > div > input, 
+form > div > select,
+form > div > div
+{
+	border: solid 1px lightgrey;
+	border-bottom: none;
+}
+
+form > div > input:focus,
+form > div > select:focus,
+form > div > input:last-child:focus
+{
+	border: solid 1px #5356FF;
+}
+
+form > div > input:focus + input, 
+form > div > input:focus + select
+{
+	border-top: none;
+}
+
+form>div>select {
+	-webkit-appearance: none; 
+	appearance: none;
+}
+
+form > div > input:first-child {
+	border-radius: 10px 10px 0 0;
+	padding-top: 14px;
+}
+
+form > div > input:last-child {
+	border-radius: 0 0 10px 10px;
+	border-bottom: solid 1px lightgrey;
+	padding-bottom: 14px;
+}
+
+#radio-container, 
+#radio-container > div
+{
+	display: flex;
+}
+
+#radio-container > div {
+	width: 100%;
+	margin: 10px;
+}
+
+#gender-man:checked ~ div > #gender-man-label, 
+#gender-woman:checked ~ div > #gender-woman-label, 
+#country-local:checked ~ div > #country-local-label, 
+#country-foreigner:checked ~ div > #country-foreigner-label
+{
+	color: #5356FF;
+}
+
+label > div {
+	width: 70px;
+	padding: 10px;
+	text-align: center;
+	border: solid 1px lightgrey;	
+	font-size: 0.8em;
+}
+
+label:first-child > div {
+	border-radius: 6px 0 0 6px;
+	border-right: none;
+}
+
+label:last-child > div {
+	border-radius: 0 6px 6px 0;
+}
+
+.error-container {
+	margin: 10px 0 0 0;
+	color: tomato;
+	width: 100%;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+#agree,
+.error-container > p {
+	display: none;
+}
+
+#agree-label > p {
+	font-size: 0.8em;
+	margin: 6px 0;
+}
+
+#agree-label > p > b {
+	color: #5356FF;
+	font-weight: bold;
+}
+
