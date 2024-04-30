@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +8,13 @@
 <jsp:include page="/header" />
 <script src="/resources/script/validation-login.js"></script>
 <body>
-	<%
-	if(session.getAttribute("user") == null)
-		response.sendRedirect("/login");
-	%>
+	<c:if test="${empty user }">
+		<c:redirect url="/login"></c:redirect>
+	</c:if>
+
 	<section id="root">
 		<h2>회원 탈퇴</h2>
-		<form method="POST" action="/deleteUserFormPro">
+		<form method="POST" action="/deleteUser">
 			<div>
 				<input type="text" id="id" name="id" value="${user.id }" disabled >
 				<input type="password" id="password" name="password" placeholder="비밀번호">
